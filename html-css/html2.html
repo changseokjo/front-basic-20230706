@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 고급</title>
+</head>
+<body>
+  <!-- 그룹 요소 -->
+  <!-- div : 화면의 구역을 나눌때 사용하는 그룹 요소 / 기본값으로 block 형태 (한줄 차지)  -->
+  <div style="background-color: #ff0000;">div 요소</div>
+  
+  <!-- span : 특정 컨텐츠를 지정할때 사용하는 그룹 요소 / 기본값으로 inline 형태 (컨텐츠 사이즈) -->
+  <span style="background-color: #0000ff;">span 요소</span>
+
+  <!-- 폼 요소 -->
+  <!-- form : 사용자로부터 입력을 받고 처리를 하는 요소 -->
+  <!-- action : 입력처리를 어떤 경로로 보낼것인가 -->
+  <!-- method: 입력처리를 어떻게 할것인가 -->
+
+  <!-- get: 서버로부터 데이터를 받기위해 사용하는 메서드 -->
+  <!-- 데이터가 URL 붙어서 전송 됨 -->
+  <!-- post: 서버에 데이터를 저장하기 위해 사용하는 메서드 -->
+  <!-- 데이터가 Request Body라 하는 곳에 숨겨져서 전송 됨 -->
+  <form action="form-action.html" method="post">
+    <!-- input : 사용자로부터 입력을 받을 수 있는 요소 -->
+    <!-- type : 어떤 형태로 입력을 받을 것인가 -->
+    <!-- placeholder : 입력이 되어있지 않을때 나타날 문구 -->
+    <!-- name : 입력을 어떠한 이름으로 받을 것인가 -->
+    <!-- value : 값을 직접 지정할 때 사용 -->
+    <input type="text" placeholder="이름을 입력하세요." name="name1" value="홍길동" />
+    <input type="password" name="password" />
+    
+    <!-- button : 사용자로부터 클릭 이벤트를 받을 수 있는 요소 -->
+    <!-- type : 버튼이 어떤 행위를 할것인가 -->
+    <button type="submit">제출</button>
+    <button type="reset">초기화</button>
+    <button type="button">버튼</button>
+    <button type="menu">메뉴</button>
+  </form>
+
+  <!-- input type -->
+  <!-- text: 문자열을 입력받는 타입 -->
+  <!-- password: 문자열을 입력받는 타입 / 가려짐 -->
+  <!-- number: 숫자를 입력받는 타입 -->
+  <input type="number" placeholder="number type" />
+  <!-- range: 숫자를 범위내에서 지정하는 타입 -->
+  <input type="range" placeholder="range type" min="0" max="10" step="2" />
+  
+  <form action="form-action.html" method="get">
+    <!-- checkbox: 선택을 할 수있는 타입 -->
+    <input type="checkbox" name="checkbox1" value="1" />
+    <input type="checkbox" name="checkbox1" value="2" />
+
+    <!-- radio: 선택을 할 수있는 타입 -->
+    <input type="radio" name="radio1" value="a" />
+    <input type="radio" name="radio1" value="b" />
+
+    <!-- file: 파일을 선택할 수 있는 타입 -->
+    <input type="file" accept="image/png, .pdf" />
+
+    <!-- select: 지정된 값 중에 선택을 할 수있는 요소 -->
+    <select>
+      <option>사과</option>
+      <option>바나나</option>
+      <option>수박</option>
+    </select>
+
+    <button type="submit">제출</button>
+  </form>
+
+  <!-- time: 시간을 선택할 수 있는 타입 -->
+  <input type="time" />
+  <!-- date: 날짜를 선택할 수 있는 타입 -->
+  <input type="date" />
+  <!-- datetime-local: 날짜 및 시간을 선택할 수 있는 타입 -->
+  <input type="datetime-local" />
+  <!-- image: 이미지를 선택할 수 있는 타입 -->
+  <input type="image" />
+
+  <!-- audio: 오디오 리소스를 표시하는 요소 -->
+  <audio controls autoplay muted>
+    <source src="asset/media/sample.mp3" type="audio/mpeg" />
+  </audio>
+  <!-- video: 비디오 리소스를 표시하는 요소 -->
+  <video autoplay muted>
+    <source src="asset/media/sample.mp4" type="video/mp4" />
+  </video>
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</body>
+</html>
