@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+  }
+  /* ! flex : 컨테이너 안의 아이템(요소)들이 최적의 공간을 차지하도록 하면서 */
+  /* !        뷰포트와 아이템의 사이즈에 따라 유연하게 배치되는 레이아웃 */
+  .flex-container {
+    width: 450px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.4);
+  
+    display: flex;
+    /* ! flex-direction: 주축의 방향을 지정 */
+    /* ! row : 주축의 방향을 가로로 지정 */
+    /* ! column : 주축의 방향을 세로로 지정 */
+    /* ! *-reverse : 주축의 순서를 역으로 지정 */
+    flex-direction: row;
+  
+    /* ! justify-content: '주 축'에서 아이템이 어떻게 배치될지 결정 */
+    /* ! flex-start: 주 축의 시작 지점부터 배치 */
+    /* ! flex-end: 주 축의 종료 지점부터 배치 */
+    /* ! center: 주 축의 가운데에 배치 */
+    /* ! space-between: 시작 요소와 마지막 요소를 사이드에 배치하고 나머지 요소가 동일한 여백으로 배치 */
+    /* justify-content: center; */
+  
+    /* ! align-items: '교차 축'에서 아이템이 어떻게 배치될지 결정 */
+    /* ! flex-start: 교차 축의 시작 지점부터 배치 */
+    /* ! flex-end: 교차 축의 종료 지점부터 배치 */
+    /* ! center: 교차 축의 가운데에 배치 */
+    /* align-items: center; */
+  }
+  
+  .flex-item-1 {
+    /* ! flex-grow: flex-item의 성장 비율을 지정 */
+    flex-grow: 1;
+    /* ! flex-shrink: flex-item의 축소 비율을 지정 */
+    flex-shrink: 1;
+    /* ! flex: flex-grow + flwx-shrink 의 단축 */
+    flex: 1;
+  
+    width: 250px;
+    height: 250px;
+  
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+  
+  .flex-item-2 {
+    flex-grow: 2;
+  
+    flex-shrink: 2;
+  
+    width: 250px;
+    height: 250px;
+  
+    background-color: rgba(0, 255, 0, 0.5);
+  }
+  
+  .flex-item-3 {
+    flex-grow: 3;
+    
+    flex-shrink: 3;
+  
+    width: 250px;
+    height: 250px;
+  
+    background-color: rgba(0, 0, 255, 0.5);
+  }
