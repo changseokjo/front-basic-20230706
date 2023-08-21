@@ -1,37 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
-import Typescript from './Typescript';
-import Component from './components/Component';
-import State from './components/State';
+import Main from './view/Main';
+import Sub from './view/Sub';
+import Header from 'layout/Header';
+import Footer from 'layout/Footer';
 
 function App() {
 
-  const flag = 1;
+  const [page, setPage] = useState<'main' | 'sub'>('main');
+
+  const { pathname } = useLocation();
 
   return (
-    <div>
-      <State />
-      {/* {mock.map(item => (<Component title={item.title} content={item.content} />))}
-      { true && (<h1>true</h1>)}
-      { true ? (<h1>true</h1>) : (<h1>false</h1>) } */}
-    </div>
+    <>
+      <Header />
+      <h1>{pathname}</h1>
+      <Routes>
+        <Route path='/main' element={ <Main setPage={setPage} /> } />
+        <Route path='/sub' element={ <Sub /> } />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
 export default App;
-
-const mock = [
-  {
-    title: '1 번째 제목',
-    content: '안녕하세요 반갑습니다.'
-  },
-  {
-    title: '2 번째 제목',
-    content: '안녕하세요 반갑습니다.'
-  },
-  {
-    title: '3 번째 제목',
-    content: '안녕하세요 반갑습니다.'
-  }
-];

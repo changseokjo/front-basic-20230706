@@ -74,6 +74,10 @@ export default function Typescript() {
     }
   };
 
+  //! 리터럴 타입: 리터럴 자체를 타입으로 명시 - 지정된 리터럴 값만 가질 수 있음
+  type Gender = '남' | '여';
+  let gender: Gender = '여';
+
   // const name = object3.name;
   // const age = object3.age;
   // const telNumber = object3.telNumber;
