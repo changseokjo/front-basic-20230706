@@ -1,7 +1,14 @@
 import React from 'react'
+import { useGlobalStore } from 'stores'
 
 export default function Footer() {
-  return (
-    <div style={{height: '200px', backgroundColor: 'rgba(0, 0, 255, 0.5)'}}>Footer</div>
-  )
+
+    const { state1, setState1 } = useGlobalStore();
+
+    return (
+        <div style={{height: '200px', backgroundColor: 'rgba(0, 0, 255, 0.5)'}}>
+            <h5>{state1}</h5>
+            <button onClick={() => setState1(state1 + 1)}>증가</button>
+        </div>
+    )
 }
